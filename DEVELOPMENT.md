@@ -2,7 +2,7 @@
 
 ## Stack
 
-React 19, Vite 6, GSAP and react-icons, with self-hosted Geist and Geist Mono fonts. Hosted on Vercel.
+React 19, Vite 6, GSAP and react-icons, with self-hosted Geist and Geist Mono fonts. Hosted on GitHub Pages.
 
 ## Running locally
 
@@ -28,7 +28,7 @@ src/
   hooks/         active section, GitHub stats
   assets/        portrait and project diagrams
 public/          CV, favicon and social preview image
-vercel.json      security headers and asset caching
+.github/         build and deploy workflow
 ```
 
 ## Updating content
@@ -39,4 +39,4 @@ vercel.json      security headers and asset caching
 
 ## Deployment
 
-Import the repository into Vercel. No environment variables are needed.
+Pushing to `main` builds the site and deploys it to GitHub Pages through `.github/workflows/deploy.yml`.

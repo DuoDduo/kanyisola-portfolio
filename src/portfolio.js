@@ -36,7 +36,7 @@ const about = {
     { label: 'Languages', value: 'English and Yoruba' },
   ],
   // Served from public/; replace that file to update the CV
-  resume: '/Kanyisola_Fagbayi_CV.pdf',
+  resume: `${import.meta.env.BASE_URL}Kanyisola_Fagbayi_CV.pdf`,
   social: {
     github: 'https://github.com/Cunyie08',
     linkedin: 'https://www.linkedin.com/in/kanyisola-fagbayi',
