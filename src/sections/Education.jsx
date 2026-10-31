@@ -1,4 +1,3 @@
-// Education and training, from her CV.
 import { education } from '../portfolio'
 import Section from '../components/Section'
 

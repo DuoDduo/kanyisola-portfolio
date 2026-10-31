@@ -29,7 +29,7 @@ const writeCache = (data) => {
   } catch { /* ignore */ }
 }
 
-// Share of my own (non-fork) repos per primary language
+// Share of non-fork repos per primary language
 const topLanguages = (repos) => {
   const counts = {}
   repos.forEach(({ language, fork }) => {
@@ -44,8 +44,7 @@ const topLanguages = (repos) => {
 
 export const GITHUB_PROFILE = `https://github.com/${USERNAME}`
 
-// `enabled` lets the caller wait until the section is near the screen,
-// so the four API calls do not compete with the first page load
+// enabled delays the requests until the section is near the screen
 export const useGitHubStats = (enabled = true) => {
   const [state, setState] = useState(() => {
     const cached = readCache()

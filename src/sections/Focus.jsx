@@ -1,9 +1,8 @@
-// Areas of focus: where she can contribute, drawn from her CV.
 import { focus } from '../portfolio'
 import Section from '../components/Section'
 
 const Focus = () => (
-  <Section id='focus' title='Where I can help' sub='The work I do best.'>
+  <Section id='focus' title='Where I can help' sub='What I work on.'>
     <ul className='focus'>
       {focus.map(({ title, text }) => (
         <li key={title} className='card card__head'>

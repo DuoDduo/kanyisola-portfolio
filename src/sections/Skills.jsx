@@ -1,4 +1,3 @@
-// Skills: the groups from her CV, AI engineering first.
 import { skills } from '../portfolio'
 import Section from '../components/Section'
 import TechIcon from '../components/TechIcon'

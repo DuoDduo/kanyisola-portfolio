@@ -1,5 +1,3 @@
-// Hero in three parts: her name and next steps, her portrait in a soft orb,
-// and a short bio. Weight, not size, sets the hierarchy.
 import { FaFileAlt, FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { about } from '../portfolio'
 import portrait from '../assets/portrait.webp'

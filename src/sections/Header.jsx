@@ -1,5 +1,3 @@
-// Navigation: a floating pill with her name, the main action and a menu that
-// drops down below it. The current section is marked as you scroll.
 import { useEffect, useRef, useState } from 'react'
 import { nav, about } from '../portfolio'
 import { useActiveSection } from '../hooks/useActiveSection'

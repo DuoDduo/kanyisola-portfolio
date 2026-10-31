@@ -1,4 +1,3 @@
-// Experience: one line per role. Opening a role shows the detail from her CV.
 import { useState } from 'react'
 import { experience } from '../portfolio'
 import Section from '../components/Section'

@@ -1,4 +1,3 @@
-// Contact: direct ways to reach her.
 import { useEffect, useRef, useState } from 'react'
 import { about, contact } from '../portfolio'
 import { GITHUB_PROFILE, useGitHubStats } from '../hooks/useGitHubStats'

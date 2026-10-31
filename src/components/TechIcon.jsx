@@ -1,4 +1,3 @@
-// A technology name with its logo, when a logo exists.
 import {
   SiDocker, SiFastapi, SiGithub, SiGooglecloud, SiGooglegemini, SiLanggraph, SiNextdotjs,
   SiNumpy, SiPandas, SiPostgresql, SiPython, SiR, SiScikitlearn, SiSupabase,

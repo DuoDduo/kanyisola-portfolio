@@ -1,5 +1,3 @@
-// Page motion, kept quiet: a short opening reveal, the orb drifting slowly with
-// the scroll, and blocks rising as they arrive. Skipped under reduced motion.
 import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

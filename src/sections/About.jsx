@@ -1,4 +1,3 @@
-// About: her story and a few facts.
 import { about } from '../portfolio'
 import Section from '../components/Section'
 

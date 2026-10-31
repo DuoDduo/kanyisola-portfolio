@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 
-// The id of the section crossing the middle of the screen. Sections not in
-// `ids` leave the last match in place, so the nav never goes blank.
+// Returns the id of the section in the middle of the screen
 export const useActiveSection = (ids) => {
   const [active, setActive] = useState(ids[0])
 

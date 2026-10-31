@@ -1,4 +1,3 @@
-// Shared heading: a short title and one line under it.
 const Section = ({ id, title, sub, children }) => (
   <section id={id} aria-labelledby={`${id}-title`} data-reveal>
     <h2 id={`${id}-title`} className='section__title'>{title}</h2>

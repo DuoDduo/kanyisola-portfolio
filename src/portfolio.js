@@ -1,5 +1,4 @@
-// All site content, taken from the CV (public/Kanyisola_Fagbayi_CV.pdf).
-// Nothing here should be stated unless the CV backs it up.
+// Site content, from public/Kanyisola_Fagbayi_CV.pdf
 
 import sentinnelImage from './assets/projects/sentinnel.svg'
 import sabilensImage from './assets/projects/sabilens.svg'
@@ -21,14 +20,14 @@ const about = {
   name: 'Kanyisola Fagbayi',
   role: 'AI & Machine Learning Engineer, Data Scientist',
   bio: [
-    'I build RAG systems, multi-agent applications and machine learning models, backed by seven years of turning data into decisions in government.',
+    'I build RAG systems, multi-agent applications and machine learning models, with seven years of experience in the Ogun State Government.',
     'I work with Python, FastAPI, LangGraph, PostgreSQL and Docker. I am also co-founder and lead engineer of Kollectors, a levy and dues collection platform.',
   ],
   story: [
     'I build machine learning models, AI applications and data platforms, from a maternal health risk model to retrieval-based assistants, fraud and complaint routing systems, and payment infrastructure.',
     'For seven years I have worked inside the Ogun State Government, designing monitoring for social programmes and turning programme data into decisions for senior officials.',
     'I studied Mechanical Engineering at the University of Lagos, then completed my MSc Data Science dissertation at the University of East London and joined the first cohort of the Bosun Tijani Foundation AI Engineering Fellowship with the Nigerian Communications Commission.',
-    'I like to start with the people a system is for. My dissertation began with the Ogun State Ministry of Health and a hard question: why do maternal deaths remain high despite free antenatal care?',
+    'For my MSc dissertation, MamaDey AI, I engaged with the Ogun State Ministry of Health on why maternal deaths remain high despite free antenatal care.',
     'My work sits where data, AI and public service meet: using evidence and technology to help programmes reach the people they are meant for.',
   ],
   facts: [
@@ -44,7 +43,6 @@ const about = {
   },
 }
 
-// The groups on the CV, AI engineering first
 const skills = [
   {
     title: 'AI engineering',
@@ -159,7 +157,6 @@ const projects = [
   },
 ]
 
-// Word for word from the CV, in CV order
 const experience = [
   {
     when: 'Oct 2019 – Present',
@@ -211,7 +208,7 @@ const education = [
 
 const focus = [
   { title: 'RAG and agentic systems', text: 'Retrieval pipelines and LangGraph multi-agent systems with citations, evaluation and audit trails.' },
-  { title: 'Machine learning models', text: 'Classification and regression models, with calibration and SHAP explanations that show why a model decided what it did.' },
+  { title: 'Machine learning models', text: 'Classification and regression models, with calibration and SHAP explanations.' },
   { title: 'APIs and data platforms', text: 'FastAPI services, PostgreSQL, webhooks and automated tests, deployed with Docker on Google Cloud.' },
   { title: 'Monitoring and evaluation', text: 'Indicator frameworks, beneficiary tracking, dashboards and evidence packs for social programmes.' },
 ]

@@ -1,4 +1,3 @@
-// Highlights: milestones stated on her CV.
 import { highlights } from '../portfolio'
 import Section from '../components/Section'
 

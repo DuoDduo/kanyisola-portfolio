@@ -1,5 +1,4 @@
-/* Design tokens for Kanyisola Fagbayi's portfolio.
-   Neutral black and grey. Brown appears only as light behind the portrait. */
+/* Design tokens */
 
 :root {
   color-scheme: dark;
@@ -9,7 +8,7 @@
   --surface: #0b0b0b;
   --surface-raised: #151515;
 
-  /* Text: hierarchy comes from these three steps and from weight */
+  /* Text */
   --text-strong: #ffffff;
   --text: #d9d9d9;
   --muted: #9a9a9a;
@@ -18,7 +17,7 @@
   --line: rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.18);
 
-  /* Warmth: light behind the portrait, and small marks */
+  /* Brown */
   --brown-deep: #2a1c14;
   --brown: #58392a;
   --accent: #b8916f;
@@ -52,7 +51,7 @@
   /* Layout */
   --page: 75rem;
   --edge: clamp(1.25rem, 4vw, 2.5rem);
-  /* The left edge of the page column, on any screen width */
+  /* Left edge of the page column */
   --page-left: max(var(--edge), calc((100vw - var(--page)) / 2 + var(--edge)));
 
   /* Shape */

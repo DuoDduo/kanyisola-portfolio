@@ -1,5 +1,3 @@
-// Featured projects: compact cards. Opening one shows the full case: the
-// problem, her part in it, what was built and with what.
 import { useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { projects } from '../portfolio'
