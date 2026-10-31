@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Kollectors: household account, payment, verification, reconciliation">
+  <defs>
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#8a5a36" stroke-opacity=".08"/></pattern>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8a5a36"/></marker>
+  </defs>
+  <rect width="640" height="360" fill="#040302"/>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <g font-family="Consolas, monospace" fill="#f1e4d6">
+    <rect x="28" y="138" width="116" height="84" rx="6" fill="#120b08" stroke="#8a5a36"/>
+    <text x="86" y="173" text-anchor="middle" font-size="16" font-weight="700">Household</text>
+    <text x="86" y="198" text-anchor="middle" font-size="12" fill="#bda590" font-family="Consolas, monospace">virtual account</text>
+    <rect x="176" y="138" width="128" height="84" rx="6" fill="#120b08" stroke="#8a5a36"/>
+    <text x="240" y="173" text-anchor="middle" font-size="16" font-weight="700">Payment</text>
+    <text x="240" y="198" text-anchor="middle" font-size="12" fill="#bda590" font-family="Consolas, monospace">Nomba APIs</text>
+    <rect x="336" y="138" width="128" height="84" rx="6" fill="#120b08" stroke="#8a5a36"/>
+    <text x="400" y="173" text-anchor="middle" font-size="16" font-weight="700">Verify</text>
+    <text x="400" y="198" text-anchor="middle" font-size="12" fill="#bda590" font-family="Consolas, monospace">signed webhook</text>
+    <rect x="496" y="138" width="116" height="84" rx="6" fill="#040302" stroke="#d6a273" stroke-width="2"/>
+    <text x="554" y="173" text-anchor="middle" font-size="16" font-weight="700" fill="#d6a273">Reconciled</text>
+    <text x="554" y="198" text-anchor="middle" font-size="12" fill="#bda590" font-family="Consolas, monospace">dashboard</text>
+  </g>
+  <g stroke="#8a5a36" stroke-width="1.5" fill="none" marker-end="url(#a)"><path d="M144 180 L172 180"/><path d="M304 180 L332 180"/><path d="M464 180 L492 180"/></g>
+  <text x="320" y="292" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-style="italic" fill="#d6a273">Confirmed only after server-side verification</text>
+</svg>

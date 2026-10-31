@@ -1,0 +1,65 @@
+/* Design tokens for Kanyisola Fagbayi's portfolio.
+   Black is the ground. Brown is only ever a faint warmth moving through it. */
+
+:root {
+  color-scheme: dark;
+
+  /* Background */
+  --black: #000000;
+  --ink: #0a0706;          /* Raised surfaces */
+  --espresso: #1f0f08;
+  --chocolate: #41230f;
+  --umber: #6b3d20;
+
+  /* Accent */
+  --bronze: #a8703f;
+  --copper: #d6a273;       /* Links and focus */
+
+  /* Text */
+  --ivory: #f1e4d6;
+  --sand: #bda590;         /* Secondary text */
+  --error: #f0a58a;
+
+  /* Lines */
+  --line: rgba(241, 228, 214, 0.1);
+  --line-strong: rgba(241, 228, 214, 0.24);
+  --line-warm: linear-gradient(90deg, var(--umber), transparent 70%);
+
+  /* Type: Martian Mono for names and headings, Geist for reading */
+  --display: 'Martian Mono Variable', ui-monospace, 'Cascadia Code', Consolas, monospace;
+  --text: 'Geist Variable', 'Segoe UI', system-ui, sans-serif;
+
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-2: clamp(1.1875rem, 1.05rem + 0.6vw, 1.5rem);
+  --step-3: clamp(1.25rem, 0.95rem + 1.4vw, 2.25rem);
+  --step-4: clamp(1.875rem, 1.35rem + 2.6vw, 3.5rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-section: clamp(4.5rem, 12vh, 8.5rem);
+
+  /* Layout: a rail on the left of large screens, a top bar on small ones */
+  --edge: clamp(1.25rem, 4vw, 3.5rem);
+  --rail: 0px;
+  --bar: 4rem;
+  --content-max: 76rem;
+
+  /* Shape: tight corners, softer for the larger surfaces */
+  --radius-small: 3px;
+  --radius-large: 10px;
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (min-width: 1100px) {
+  :root { --rail: 11rem; --bar: 0px; }
+}

@@ -1,0 +1,149 @@
+/* Reset, shared elements and the moving light behind the page */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+a { color: inherit; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--bar) + var(--space-5));
+  background: var(--black);
+}
+
+body {
+  font: 400 var(--step-1) / 1.65 var(--text);
+  color: var(--ivory);
+  background: var(--black);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+body[data-menu-open] { overflow: hidden; }
+
+main, .footer { position: relative; z-index: 1; }
+
+:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
+
+::selection { color: var(--black); background: var(--copper); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip {
+  position: fixed;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 40;
+  padding: var(--space-2) var(--space-4);
+  color: var(--black);
+  background: var(--ivory);
+  transform: translateY(-200%);
+}
+.skip:focus { transform: none; }
+
+.link {
+  color: var(--copper);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  transition: color 200ms var(--ease);
+}
+.link:hover { color: var(--ivory); }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.875rem;
+  padding: var(--space-2) var(--space-5);
+  font: 500 var(--step--1) / 1.2 var(--display);
+  font-stretch: 87%;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-small);
+  transition: background-color 200ms var(--ease), border-color 200ms var(--ease), color 200ms var(--ease), transform 200ms var(--ease);
+}
+.btn:active { transform: translateY(1px); }
+.btn--primary { color: var(--black); background: var(--ivory); }
+.btn--primary:hover { background: var(--copper); }
+.btn--secondary { border-color: var(--line-strong); }
+.btn--secondary:hover { border-color: var(--copper); color: var(--copper); }
+
+/* Sections */
+.section {
+  max-width: calc(var(--content-max) + var(--rail) + var(--edge) * 2);
+  padding: var(--space-section) var(--edge) var(--space-section) calc(var(--rail) + var(--edge));
+}
+.section__head { max-width: 46rem; margin-bottom: clamp(2rem, 6vh, 3.5rem); }
+.section__title {
+  font: 600 var(--step-4) / 1.08 var(--display);
+  font-stretch: 75%;
+  letter-spacing: -0.05em;
+}
+.section__intro { margin-top: var(--space-3); color: var(--sand); }
+
+/* The light: three soft shapes behind everything, moved by motion.js */
+.flow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.flow__pool {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  will-change: transform;
+}
+.flow__pool--chocolate {
+  top: -24vh;
+  right: -22vw;
+  width: 68vmax;
+  height: 68vmax;
+  opacity: 0.7;
+  background: radial-gradient(closest-side, var(--chocolate), var(--espresso) 34%, transparent 64%);
+}
+/* A long diagonal band rather than a circle */
+.flow__pool--bronze {
+  top: 18vh;
+  left: -46vw;
+  width: 110vmax;
+  height: 12vmax;
+  opacity: 0.16;
+  background: radial-gradient(closest-side, var(--bronze), var(--chocolate) 40%, transparent 76%);
+  transform: rotate(-22deg);
+}
+.flow__pool--espresso {
+  bottom: -40vh;
+  left: -10vw;
+  width: 46vmax;
+  height: 46vmax;
+  background: radial-gradient(closest-side, var(--espresso), transparent 66%);
+}
+/* Fine grain so the gradients stay smooth on dark screens */
+.flow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
