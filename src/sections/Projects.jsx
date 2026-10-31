@@ -18,7 +18,7 @@ const Project = ({ project, index, open, onToggle }) => {
       <div id={`project-${index}`} className='fold'>
         <div className='fold__clip'>
           <div className='card__body'>
-            <img src={image} alt='' width='640' height='360' loading='lazy' />
+            {image && <img src={image} alt='' width='640' height='360' loading='lazy' />}
             <dl className='card__facts'>
               <div><dt>Context</dt><dd>{label}</dd></div>
               <div><dt>The problem</dt><dd>{problem}</dd></div>

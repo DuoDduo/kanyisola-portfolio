@@ -35,4 +35,4 @@ For seven years I have worked inside the Ogun State Government, designing monito
 - LinkedIn: [linkedin.com/in/kanyisola-fagbayi](https://www.linkedin.com/in/kanyisola-fagbayi)
 - GitHub: [github.com/Cunyie08](https://github.com/Cunyie08)
 
-Working on this site? See [DEVELOPMENT.md](DEVELOPMENT.md).
+To update this site, see [DEPLOYMENT.md](DEPLOYMENT.md).
