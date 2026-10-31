@@ -1,8 +1,7 @@
-// Contact: direct details on one side, the form on the other.
+// Contact: direct ways to reach her.
 import { useEffect, useRef, useState } from 'react'
 import { about, contact } from '../portfolio'
 import { GITHUB_PROFILE, useGitHubStats } from '../hooks/useGitHubStats'
-import ContactForm from './ContactForm'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -23,14 +22,17 @@ const Contact = () => {
       <div data-reveal>
         <h2 id='contact-title' className='section__title'>Let&apos;s talk</h2>
         <p className='section__sub'>Tell me about the role, the project or the problem you want to solve.</p>
-        <a href={`mailto:${contact.email}`} className='link contact__email'>{contact.email}</a>
-        <ul className='contact__links'>
-          <li><a href={about.social.linkedin} target='_blank' rel='noopener noreferrer' className='link'>LinkedIn</a></li>
-          <li><a href={GITHUB_PROFILE} target='_blank' rel='noopener noreferrer' className='link'>GitHub</a></li>
-        </ul>
         {data && <p className='contact__stats'>{data.repos} public repositories and {data.commits} public commits on GitHub.</p>}
       </div>
-      <ContactForm />
+      <div data-reveal>
+        <a href={`mailto:${contact.email}`} className='link contact__email'>{contact.email}</a>
+        <div className='contact__actions'>
+          <a href={`mailto:${contact.email}`} className='btn btn--solid'>Email me</a>
+          <a href={about.social.linkedin} target='_blank' rel='noopener noreferrer' className='btn'>LinkedIn</a>
+          <a href={GITHUB_PROFILE} target='_blank' rel='noopener noreferrer' className='btn'>GitHub</a>
+          <a href={about.resume} download='Kanyisola_Fagbayi_CV.pdf' className='btn'>Download CV</a>
+        </div>
+      </div>
     </section>
   )
 }

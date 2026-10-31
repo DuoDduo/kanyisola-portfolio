@@ -4,7 +4,7 @@ Personal portfolio of **Kanyisola Fagbayi**, AI and machine learning engineer an
 
 ## Stack
 
-React 19, Vite 6, GSAP, react-icons, self-hosted Geist and Geist Mono, Vercel (hosting, serverless contact form and analytics)
+React 19, Vite 6, GSAP, react-icons, self-hosted Geist and Geist Mono, Vercel (hosting and analytics)
 
 ## Running locally
 
@@ -19,7 +19,6 @@ npm run lint       # ESLint
 ## Project structure
 
 ```
-api/contact.js   # serverless function behind the contact form
 src/
   portfolio.js   # all site content, from the CV
   styles/        # tokens.css (design tokens), base.css, sections.css
@@ -32,10 +31,6 @@ public/          # CV, favicon and social preview image
 vercel.json      # security headers and asset caching
 ```
 
-## Contact form
-
-The form posts to `api/contact.js`, which sends mail through [Resend](https://resend.com). Set the variables in `.env.example` in Vercel. Until they are set, the form tells visitors the message was not sent and shows her email address. The endpoint only runs on Vercel, so use `vercel dev` to try it locally.
-
 ## Security
 
-`vercel.json` sets a strict Content-Security-Policy, blocks framing, and sets HSTS, `nosniff`, Referrer-Policy and Permissions-Policy headers. Secrets live only in Vercel environment variables.
+`vercel.json` sets a strict Content-Security-Policy, blocks framing, and sets HSTS, `nosniff`, Referrer-Policy and Permissions-Policy headers. The site has no backend and stores no secrets.
