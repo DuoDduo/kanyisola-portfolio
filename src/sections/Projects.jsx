@@ -1,58 +1,43 @@
-// Featured projects: an index of names. Choosing one opens the full case:
-// the problem, her part in it, what was built and with what.
+// Featured projects: compact cards. Opening one shows the full case: the
+// problem, her part in it, what was built and with what.
 import { useState } from 'react'
+import { FiArrowUpRight } from 'react-icons/fi'
 import { projects } from '../portfolio'
-import { ScrollTrigger } from '../motion'
 import Section from '../components/Section'
 import TechIcon from '../components/TechIcon'
 
 const Project = ({ project, index, open, onToggle }) => {
-  const { name, label, overview, problem, contribution, features, stack, image, live, repo } = project
+  const { name, overview, label, problem, contribution, features, stack, image, live, repo } = project
   return (
-    <li
-      className='project'
-      data-open={open || undefined}
-      // The page height changed, so scroll positions need re-measuring
-      onTransitionEnd={(e) => { if (e.propertyName === 'grid-template-rows') ScrollTrigger.refresh() }}
-    >
+    <li className='card' data-open={open || undefined}>
       <h3>
-        <button
-          type='button'
-          className='project__row'
-          aria-expanded={open}
-          aria-controls={`project-${index}`}
-          onClick={onToggle}
-        >
-          <span className='project__name'>{name}</span>
-          <span className='project__label'>{label}</span>
+        <button type='button' className='card__head' aria-expanded={open} aria-controls={`project-${index}`} onClick={onToggle}>
+          <span className='card__name'>{name}</span>
+          <span className='card__line'>{overview}</span>
+          <FiArrowUpRight className='card__arrow' aria-hidden='true' />
         </button>
       </h3>
-      <div id={`project-${index}`} className='project__panel'>
-        <div className='project__clip'>
-          <div className='project__body'>
-            <figure className='project__media'>
-              <img src={image} alt='' width='640' height='360' loading='lazy' />
-              <figcaption>How {name} works</figcaption>
-            </figure>
-            <div className='project__detail'>
-              <p>{overview}</p>
-              <dl className='project__facts'>
-                <div><dt>The problem</dt><dd>{problem}</dd></div>
-                <div><dt>My part</dt><dd>{contribution}</dd></div>
-              </dl>
-              <ul className='project__features'>
-                {features.map((feature) => <li key={feature}>{feature}</li>)}
-              </ul>
-              <ul className='project__stack'>
-                {stack.map((item) => <TechIcon key={item} name={item} />)}
-              </ul>
-              {(live || repo) && (
-                <div className='project__links'>
-                  {live && <a href={live} target='_blank' rel='noopener noreferrer' className='link'>Visit the live site</a>}
-                  {repo && <a href={repo} target='_blank' rel='noopener noreferrer' className='link'>View the code on GitHub</a>}
-                </div>
-              )}
-            </div>
+      <div id={`project-${index}`} className='fold'>
+        <div className='fold__clip'>
+          <div className='card__body'>
+            <img src={image} alt='' width='640' height='360' loading='lazy' />
+            <dl className='card__facts'>
+              <div><dt>Context</dt><dd>{label}</dd></div>
+              <div><dt>The problem</dt><dd>{problem}</dd></div>
+              <div><dt>My part</dt><dd>{contribution}</dd></div>
+            </dl>
+            <ul className='card__features'>
+              {features.map((feature) => <li key={feature}>{feature}</li>)}
+            </ul>
+            <ul className='tags'>
+              {stack.map((item) => <TechIcon key={item} name={item} />)}
+            </ul>
+            {(live || repo) && (
+              <div className='card__links'>
+                {live && <a href={live} target='_blank' rel='noopener noreferrer' className='link'>Visit the live site</a>}
+                {repo && <a href={repo} target='_blank' rel='noopener noreferrer' className='link'>View the code on GitHub</a>}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -61,10 +46,10 @@ const Project = ({ project, index, open, onToggle }) => {
 }
 
 const Projects = () => {
-  const [open, setOpen] = useState(0)
+  const [open, setOpen] = useState(-1)
   return (
-    <Section id='projects' title='Featured projects' intro='AI systems, machine learning models and the platforms behind them.'>
-      <ul data-reveal>
+    <Section id='projects' title='Projects' sub='A few things I have built.'>
+      <ul className='cards'>
         {projects.map((project, i) => (
           <Project
             key={project.name}

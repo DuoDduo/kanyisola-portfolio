@@ -1,40 +1,44 @@
 /* Design tokens for Kanyisola Fagbayi's portfolio.
-   Black is the ground. Brown is only ever a faint warmth moving through it. */
+   Neutral black and grey. Brown appears only as light behind the portrait. */
 
 :root {
   color-scheme: dark;
 
   /* Background */
-  --black: #000000;
-  --ink: #0a0706;          /* Raised surfaces */
-  --espresso: #1f0f08;
-  --chocolate: #41230f;
-  --umber: #6b3d20;
+  --bg: #000000;
+  --surface: #0b0b0b;
+  --surface-raised: #151515;
 
-  /* Accent */
-  --bronze: #a8703f;
-  --copper: #d6a273;       /* Links and focus */
-
-  /* Text */
-  --ivory: #f1e4d6;
-  --sand: #bda590;         /* Secondary text */
-  --error: #f0a58a;
+  /* Text: hierarchy comes from these three steps and from weight */
+  --text-strong: #ffffff;
+  --text: #d9d9d9;
+  --muted: #9a9a9a;
 
   /* Lines */
-  --line: rgba(241, 228, 214, 0.1);
-  --line-strong: rgba(241, 228, 214, 0.24);
-  --line-warm: linear-gradient(90deg, var(--umber), transparent 70%);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
 
-  /* Type: Martian Mono for names and headings, Geist for reading */
-  --display: 'Martian Mono Variable', ui-monospace, 'Cascadia Code', Consolas, monospace;
-  --text: 'Geist Variable', 'Segoe UI', system-ui, sans-serif;
+  /* Warmth: light behind the portrait, and small marks */
+  --brown-deep: #2a1c14;
+  --brown: #58392a;
+  --accent: #b8916f;
+  --error: #f0a58a;
 
-  --step--1: 0.875rem;
-  --step-0: 1rem;
-  --step-1: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
-  --step-2: clamp(1.1875rem, 1.05rem + 0.6vw, 1.5rem);
-  --step-3: clamp(1.25rem, 0.95rem + 1.4vw, 2.25rem);
-  --step-4: clamp(1.875rem, 1.35rem + 2.6vw, 3.5rem);
+  /* Type */
+  --sans: 'Geist Variable', 'Segoe UI', system-ui, sans-serif;
+  --mono: 'Geist Mono Variable', ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-base: 0.9375rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-name: clamp(2.25rem, 1.7rem + 2.2vw, 3.5rem);
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
 
   /* Spacing */
   --space-1: 0.25rem;
@@ -44,22 +48,16 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
   --space-7: 3rem;
-  --space-8: 4rem;
-  --space-section: clamp(4.5rem, 12vh, 8.5rem);
 
-  /* Layout: a rail on the left of large screens, a top bar on small ones */
-  --edge: clamp(1.25rem, 4vw, 3.5rem);
-  --rail: 0px;
-  --bar: 4rem;
-  --content-max: 76rem;
+  /* Layout */
+  --page: 75rem;
+  --edge: clamp(1.25rem, 4vw, 2.5rem);
+  /* The left edge of the page column, on any screen width */
+  --page-left: max(var(--edge), calc((100vw - var(--page)) / 2 + var(--edge)));
 
-  /* Shape: tight corners, softer for the larger surfaces */
-  --radius-small: 3px;
-  --radius-large: 10px;
+  /* Shape */
+  --radius: 10px;
+  --radius-pill: 999px;
 
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-@media (min-width: 1100px) {
-  :root { --rail: 11rem; --bar: 0px; }
 }

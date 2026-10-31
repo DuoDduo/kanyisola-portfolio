@@ -3,12 +3,12 @@ import { focus } from '../portfolio'
 import Section from '../components/Section'
 
 const Focus = () => (
-  <Section id='focus' title='Where I can help'>
+  <Section id='focus' title='Where I can help' sub='The work I do best.'>
     <ul className='focus'>
       {focus.map(({ title, text }) => (
-        <li key={title} className='focus__item' data-reveal>
-          <h3 className='focus__title'>{title}</h3>
-          <p>{text}</p>
+        <li key={title} className='card card__head'>
+          <h3 className='card__name'>{title}</h3>
+          <p className='card__line'>{text}</p>
         </li>
       ))}
     </ul>

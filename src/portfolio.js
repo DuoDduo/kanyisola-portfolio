@@ -19,10 +19,13 @@ const nav = [
 
 const about = {
   name: 'Kanyisola Fagbayi',
-  role: 'AI & Machine Learning Engineer and Data Scientist',
-  intro: 'I build RAG systems, multi-agent applications and machine learning models, backed by seven years of turning data into decisions in government.',
-  lead: 'I build machine learning models, AI applications and data platforms, from a maternal health risk model to retrieval-based assistants, fraud and complaint routing systems, and payment infrastructure.',
+  role: 'AI & Machine Learning Engineer, Data Scientist',
+  bio: [
+    'I build RAG systems, multi-agent applications and machine learning models, backed by seven years of turning data into decisions in government.',
+    'I work with Python, FastAPI, LangGraph, PostgreSQL and Docker. I am also co-founder and lead engineer of Kollectors, a levy and dues collection platform.',
+  ],
   story: [
+    'I build machine learning models, AI applications and data platforms, from a maternal health risk model to retrieval-based assistants, fraud and complaint routing systems, and payment infrastructure.',
     'For seven years I have worked inside the Ogun State Government, designing monitoring for social programmes and turning programme data into decisions for senior officials.',
     'I studied Mechanical Engineering at the University of Lagos, then completed my MSc Data Science dissertation at the University of East London and joined the first cohort of the Bosun Tijani Foundation AI Engineering Fellowship with the Nigerian Communications Commission.',
     'I like to start with the people a system is for. My dissertation began with the Ogun State Ministry of Health and a hard question: why do maternal deaths remain high despite free antenatal care?',

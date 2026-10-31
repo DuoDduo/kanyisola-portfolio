@@ -3,15 +3,13 @@ import { education } from '../portfolio'
 import Section from '../components/Section'
 
 const Education = () => (
-  <Section id='education' title='Education and training'>
-    <ul className='education'>
+  <Section id='education' title='Education' sub='Degrees and training.'>
+    <ul>
       {education.map(({ when, title, org }) => (
-        <li key={title} data-reveal>
-          <p className='education__when'>{when}</p>
-          <div>
-            <h3 className='education__title'>{title}</h3>
-            <p className='education__org'>{org}</p>
-          </div>
+        <li key={title} className='plain'>
+          <h3 className='plain__title'>{title}</h3>
+          <p className='plain__text'>{org}</p>
+          <p className='plain__when'>{when}</p>
         </li>
       ))}
     </ul>

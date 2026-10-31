@@ -17,23 +17,27 @@ const App = () => {
   return (
     <>
       <a href='#main' className='skip'>Skip to content</a>
-      {/* The faint warm light that moves through the black as the page scrolls */}
-      <div className='flow' aria-hidden='true'>
-        <i className='flow__pool flow__pool--chocolate' />
-        <i className='flow__pool flow__pool--bronze' />
-        <i className='flow__pool flow__pool--espresso' />
-      </div>
       <Header />
       <main id='main'>
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <Focus />
-        <Highlights />
-        <Contact />
+        <div className='rows'>
+          <div className='row'>
+            <Projects />
+            <div className='stack'>
+              <Experience />
+              <Education />
+            </div>
+          </div>
+          <div className='row'>
+            <About />
+            <Skills />
+          </div>
+          <div className='row'>
+            <Focus />
+            <Highlights />
+          </div>
+          <Contact />
+        </div>
       </main>
       <Footer />
     </>

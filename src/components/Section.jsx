@@ -1,11 +1,9 @@
-// Shared wrapper: every section gets the same id, heading and spacing.
-const Section = ({ id, title, intro, children }) => (
-  <section id={id} className='section' aria-labelledby={`${id}-title`}>
-    <header className='section__head' data-reveal>
-      <h2 id={`${id}-title`} className='section__title'>{title}</h2>
-      {intro && <p className='section__intro'>{intro}</p>}
-    </header>
-    {children}
+// Shared heading: a short title and one line under it.
+const Section = ({ id, title, sub, children }) => (
+  <section id={id} aria-labelledby={`${id}-title`} data-reveal>
+    <h2 id={`${id}-title`} className='section__title'>{title}</h2>
+    {sub && <p className='section__sub'>{sub}</p>}
+    <div className='section__body'>{children}</div>
   </section>
 )
 

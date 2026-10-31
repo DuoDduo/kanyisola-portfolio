@@ -24,7 +24,7 @@ const ICONS = {
 const TechIcon = ({ name }) => {
   const Icon = ICONS[name]
   return (
-    <li className='skill'>
+    <li className='tag'>
       {Icon && <Icon aria-hidden='true' />}
       {name}
     </li>

@@ -79,7 +79,7 @@ const ContactForm = () => {
         <input id='website' name='website' tabIndex={-1} autoComplete='off' value={values.website} onChange={update} />
       </div>
       <div className='form__actions'>
-        <button type='submit' className='btn btn--primary' disabled={status === 'sending'}>
+        <button type='submit' className='btn btn--solid' disabled={status === 'sending'}>
           {status === 'sending' ? 'Sending' : 'Send message'}
         </button>
         <div aria-live='polite'>

@@ -4,7 +4,7 @@ Personal portfolio of **Kanyisola Fagbayi**, AI and machine learning engineer an
 
 ## Stack
 
-React 19, Vite 6, GSAP, react-icons, self-hosted Martian Mono and Geist, Vercel (hosting, serverless contact form and analytics)
+React 19, Vite 6, GSAP, react-icons, self-hosted Geist and Geist Mono, Vercel (hosting, serverless contact form and analytics)
 
 ## Running locally
 
@@ -23,7 +23,7 @@ api/contact.js   # serverless function behind the contact form
 src/
   portfolio.js   # all site content, from the CV
   styles/        # tokens.css (design tokens), base.css, sections.css
-  motion.js      # opening reveal, scroll-driven light, reveals
+  motion.js      # opening reveal and quiet scroll reveals
   sections/      # one file per section
   components/    # shared Section wrapper and TechIcon
   hooks/         # active nav section, GitHub stats
